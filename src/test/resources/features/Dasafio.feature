@@ -1,30 +1,16 @@
-Feature: Executar os testes sobre o desafio pedido
+Feature: Executar os testes sobre o desafio proposto
 
-  @test01 @todos
-  Scenario: Criar Novo Cliente
+  @test01
+  Scenario: Criar Novo usuario
     Given Acesso ao link de teste
-    And Clico em novo para adcionar novo cliente
-    When Insiro as informações
-    Then Valido a criacao
+    And Clico em sign in
+    When insiro um email valido
+    And preencho as informacoes
+    Then usuario criado com sucesso
 
-  @test02 @todos
-  Scenario: Editar cliente
+  @test02
+  Scenario: Realizar login
     Given Acesso ao link de teste
-    And Clico no botao de editar
-    When edito a opcao desejada
-    Then Valido a edicao
-
-  @test03 @todos
-  Scenario: Deletar cliente
-    Given Acesso ao link de teste
-    When Clico no botao de editar
-    Then clico em deletar
-
-  @test04 @todos
-  Scenario: Criar email cliente
-    Given Acesso ao link de teste
-    And Clico no botao de editar
-    When clico em mostrar categorias
-    And clico no botao novo
-    And preencho os campos
-    Then clico em cadastrar
+    And Clico em sign in
+    When insiro as informacoes de login
+    Then login realizado com sucesso
